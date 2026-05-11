@@ -1,6 +1,6 @@
 # Stocky
 
-#### Video Demo: 
+#### Video Demo: https://www.youtube.com/watch?v=ntIr__JkwtI
 
 #### Description:
 
