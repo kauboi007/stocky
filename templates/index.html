@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocky</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stocky</h1>
+
+        <div class="card">
+            <h2>Search Stock</h2>
+            <div class="row">
+                <input type="text" id="tickerInput" placeholder="e.g. AAPL or RELIANCE.NS" />
+                <button onclick="searchStock()">Search</button>
+            </div>
+        </div>
+
+        <div class="card" id="stockCard" style="display:none">
+            <div class="stock-header">
+                <div>
+                    <h2 id="stockName"></h2>
+                    <span id="stockTicker" class="tag"></span>
+                    <span id="stockSector" class="tag"></span>
+                </div>
+                <div>
+                    <h2 id="stockPrice"></h2>
+                    <button onclick="addToWatchlist()">+ Watchlist</button>
+                </div>
+            </div>
+            <div class="metrics">
+                <div class="metric"><span>P/E Ratio</span><strong id="mPE"></strong></div>
+                <div class="metric"><span>EPS</span><strong id="mEPS"></strong></div>
+                <div class="metric"><span>Market Cap</span><strong id="mCap"></strong></div>
+                <div class="metric"><span>52W High</span><strong id="mHigh"></strong></div>
+                <div class="metric"><span>52W Low</span><strong id="mLow"></strong></div>
+                <div class="metric"><span>Volume</span><strong id="mVol"></strong></div>
+            </div>
+            <canvas id="priceChart" height="100"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>Screener</h2>
+            <div class="row">
+                <input type="text" id="screenTickers" placeholder="Tickers: AAPL,MSFT,GOOGL" />
+                <input type="number" id="screenPE" placeholder="Max P/E" />
+                <input type="number" id="screenCap" placeholder="Min Market Cap (B USD)" />
+                <button onclick="runScreener()">Run</button>
+            </div>
+            <div id="screenResults"></div>
+        </div>
+
+        <div class="card">
+            <h2>Watchlist</h2>
+            <div id="watchlistItems"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

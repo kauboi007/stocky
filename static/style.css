@@ -1,0 +1,20 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; background: #0f0f0f; color: #eee; padding: 20px; }
+.container { max-width: 900px; margin: auto; }
+h1 { margin-bottom: 20px; }
+.card { background: #1a1a1a; border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+.card h2 { margin-bottom: 15px; font-size: 1.1rem; color: #aaa; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+input { flex: 1; padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #111; color: #eee; }
+button { padding: 8px 16px; border-radius: 6px; border: none; background: #eab308; color: black; cursor: pointer; }button:hover { background: #ca8a04; }
+.stock-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.tag { background: #333; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; }
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
+.metric { background: #111; padding: 12px; border-radius: 8px; }
+.metric span { display: block; font-size: 0.75rem; color: #888; margin-bottom: 4px; }
+.metric strong { font-size: 1.1rem; }
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { padding: 10px; text-align: left; border-bottom: 1px solid #222; font-size: 0.9rem; }
+th { color: #888; }
+.watchlist-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #222; }
+.del-btn { background: #dc2626; padding: 4px 10px; font-size: 0.8rem; }
